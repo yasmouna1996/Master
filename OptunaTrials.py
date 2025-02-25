@@ -34,7 +34,7 @@ class NiftiDataset(Dataset):
         img = crop_or_pad(img)
 
         #apply resampling 256x256x256
-        resample = tio.Resample((4,4,4))
+        resample = tio.Resample((2,2,2))
         img = resample(img)
 
         if self.transform:
